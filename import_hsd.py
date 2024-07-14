@@ -1198,11 +1198,7 @@ active: %.8X' % ((tev.color_op, tev.alpha_op, tev.color_bias, tev.alpha_bias,\
         mult.operation = 'MULTIPLY'
         links.new(hsv.outputs[2], mult.inputs[0])
         links.new(shiny.outputs[0], mult.inputs[1])
-        links.new(mult.outputs[0], shader.inputs["Specular"])
-    else:
-        shader.inputs["Specular"].default_value = 0
-    #specular tint
-    shader.inputs["Specular Tint"].default_value = .5
+    
     #roughness
     shader.inputs["Roughness"].default_value = .5
 
