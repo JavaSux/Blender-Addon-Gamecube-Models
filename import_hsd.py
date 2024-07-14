@@ -2194,7 +2194,6 @@ def make_mesh_object(pobj, name):
             uvlayer = make_texture_layer(me, vtxdesc, sources[vtxnum], facelists[vtxnum])
         elif vtxdesc.attr == gx.GX_VA_NRM or vtxdesc.attr == gx.GX_VA_NBT:
             assign_normals_to_mesh(pobj, me, vtxdesc, sources[vtxnum], facelists[vtxnum])
-            me.use_auto_smooth = True
         elif (vtxdesc.attr == gx.GX_VA_CLR0 or
               vtxdesc.attr == gx.GX_VA_CLR1):
             add_color_layer(me, vtxdesc, sources[vtxnum], facelists[vtxnum])
